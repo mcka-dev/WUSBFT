@@ -1,0 +1,24 @@
+// encoding=utf-8
+// Warning:  Save file without BOM!!!
+#pragma code_page(65001)
+
+// English (U.S.) resources
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+
+// Main
+STRINGTABLE
+BEGIN
+1001, "Wrong package."
+1002, "The device is busy."
+1003, "The device is not ready."
+1004, "Incorrect parameters."
+1005, "The device does not respond."
+1006, "Отсутствует несущая."
+1007, "Unknown device error.\nError code: %d"
+1008, "An error occurred while sending the packet to the port."
+1009, "An error occurred while receiving a packet from the port."
+1010, "Port error in the Purge call."
+
+2000, "Invalid parameter \"%s\""
+2001, "Result: %s"
+END
