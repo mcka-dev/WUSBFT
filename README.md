@@ -4,7 +4,7 @@ WUSB
 ----
 Wake protocol library.
 
-Compiling and Building in Visual Studio 2017 (x86/x64):
+Compiling and Building in Visual Studio 2017 (x86/x86-64):
 
 WUSB32.dll (x86, 3584 Byte)
 WUSB64.dll (x86-64, 4096 Byte)
