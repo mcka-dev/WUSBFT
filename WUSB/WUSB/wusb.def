@@ -1,0 +1,8 @@
+EXPORTS
+    AccessUSB
+    CloseUSB
+    NumUSB
+    OpenUSB
+    PurgeUSB
+    RxFrameUSB
+    TxFrameUSB
