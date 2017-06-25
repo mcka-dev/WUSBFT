@@ -35,25 +35,34 @@ for Linux & Windows
 Example of use in 
   - Embarcadero Delphi v10.2 Tokyo (x86/x86-64)
   	- Windows 10
-      <a href="https://github.com/mcka-dev/WUSBFT/blob/master/Example/Delphi/Screenshots/Win10 (Rus) - Wake Delphi пример.png"><img src="https://github.com/mcka-dev/WUSBFT/blob/master/Example/Delphi/Screenshots/Win10 (Rus) - Wake Delphi пример.png" alt="Windows 10: Wake Delphi пример" title="Windows 10: Wake Delphi пример"></a>
+
+      <a href="https://github.com/mcka-dev/WUSBFT/blob/master/Example/Delphi/wake-delphi-example/Screenshots/Win10 (Rus) - Wake Delphi пример.png"><img src="https://github.com/mcka-dev/WUSBFT/blob/master/Example/Delphi/wake-delphi-example/Screenshots/Win10 (Rus) - Wake Delphi пример.png" alt="Windows 10: Wake Delphi пример" title="Windows 10: Wake Delphi пример"></a>
     - Windows 7
-      <a href="https://github.com/mcka-dev/WUSBFT/blob/master/Example/Delphi/Screenshots/Win7 (Eng) - Wake Delphi example.png"><img src="https://github.com/mcka-dev/WUSBFT/blob/master/Example/Delphi/Screenshots/Win7 (Eng) - Wake Delphi example.png" alt="Windows 7: Wake Delphi example" title="Windows 7: Wake Delphi example"></a>
+
+      <a href="https://github.com/mcka-dev/WUSBFT/blob/master/Example/Delphi/wake-delphi-example/Screenshots/Win7 (Eng) - Wake Delphi example.png"><img src="https://github.com/mcka-dev/WUSBFT/blob/master/Example/Delphi/wake-delphi-example/Screenshots/Win7 (Eng) - Wake Delphi example.png" alt="Windows 7: Wake Delphi example" title="Windows 7: Wake Delphi example"></a>
 	- Windows XP
-	  <a href="https://github.com/mcka-dev/WUSBFT/blob/master/Example/Delphi/Screenshots/WinXP (Rus) - Wake Delphi пример.png"><img src="https://github.com/mcka-dev/WUSBFT/blob/master/Example/Delphi/Screenshots/WinXP (Rus) - Wake Delphi пример.png" alt="Windows XP: Wake Delphi пример" title="Windows XP: Wake Delphi пример"></a>  
+
+	  <a href="https://github.com/mcka-dev/WUSBFT/blob/master/Example/Delphi/wake-delphi-example/Screenshots/WinXP (Rus) - Wake Delphi пример.png"><img src="https://github.com/mcka-dev/WUSBFT/blob/master/Example/Delphi/wake-delphi-example/Screenshots/WinXP (Rus) - Wake Delphi пример.png" alt="Windows XP: Wake Delphi пример" title="Windows XP: Wake Delphi пример"></a>  
+
   - Java 8 (x86/x86-64)
     - Windows 10
+
 	  <a href="https://github.com/mcka-dev/WUSBFT/blob/master/Example/Java/wake-java-example/screenshots/Win10 (Rus) - Wake Java пример.png"><img src="https://github.com/mcka-dev/WUSBFT/blob/master/Example/Java/wake-java-example/screenshots/Win10 (Rus) - Wake Java пример.png" alt="Windows 10: Wake Java пример" title="Windows 10: Wake Java пример"></a>
 
     - Windows 7
+
       <a href="https://github.com/mcka-dev/WUSBFT/blob/master/Example/Java/wake-java-example/screenshots/Win7 (Eng) - Wake Java example.png"><img src="https://github.com/mcka-dev/WUSBFT/blob/master/Example/Java/wake-java-example/screenshots/Win7 (Eng) - Wake Java example.png" alt="Windows 7: Wake Java example" title="Windows 7: Wake Java example"></a>
 
     - Windows XP
+
       <a href="https://github.com/mcka-dev/WUSBFT/blob/master/Example/Java/wake-java-example/screenshots/WinXP (Rus) - Wake Delphi пример.png"><img src="https://github.com/mcka-dev/WUSBFT/blob/master/Example/Java/wake-java-example/screenshots/WinXP (Rus) - Wake Delphi пример.png" alt="Windows XP: Wake Delphi пример" title="Windows XP: Wake Delphi пример"></a>
 
     - Ubuntu
+
       <a href="https://github.com/mcka-dev/WUSBFT/blob/master/Example/Java/wake-java-example/screenshots/Ubuntu (Rus) - Wake Java пример.png"><img src="https://github.com/mcka-dev/WUSBFT/blob/master/Example/Java/wake-java-example/screenshots/Ubuntu (Rus) - Wake Java пример.png" alt="Ubuntu: Wake Java пример" title="Ubuntu: Wake Java пример"></a>
 
     - Debian
+    
       <a href="https://github.com/mcka-dev/WUSBFT/blob/master/Example/Java/wake-java-example/screenshots/Debian (Eng) - Wake Java example.png"><img src="https://github.com/mcka-dev/WUSBFT/blob/master/Example/Java/wake-java-example/screenshots/Debian (Eng) - Wake Java example.png" alt="Debian: Wake Java example" title="Debian: Wake Java example"></a>
 
 ## License
