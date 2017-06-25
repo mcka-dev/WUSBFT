@@ -2,10 +2,10 @@
 
 ## WUSB
 
-### Description
 Wake protocol library.
 
 HTML: http://leoniv.diod.club/articles/wake/wake.html
+
 PDF: http://leoniv.diod.club/articles/wake/downloads/wake.pdf
 
 ### Compiling and Building
@@ -15,7 +15,7 @@ PDF: http://leoniv.diod.club/articles/wake/downloads/wake.pdf
 
 - in GNU C++ for Linux (x86/x86-64):
   - libWUSB32.so (x86, 4780 Byte)
-  - libWUSB64.so (x86-64, (5496 Byte)
+  - libWUSB64.so (x86-64, 5496 Byte)
 
 ### Exported functions:   
   - AccessUSB
