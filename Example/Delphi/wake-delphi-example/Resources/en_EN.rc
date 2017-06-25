@@ -1,0 +1,54 @@
+// encoding=utf-8
+// Warning:  Save file without BOM!!!
+#pragma code_page(65001)
+
+// English (U.S.) resources
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+
+// Main
+STRINGTABLE
+BEGIN
+1000, "Wake Delphi example"
+
+2001, "Wrong package."
+2002, "The device is busy."
+2003, "The device is not ready."
+2004, "Incorrect parameters."
+2005, "The device does not respond."
+2006, "There is no carrier."
+2007, "Unknown device error.\nError code: %d"
+
+3001, "Port not opened."
+3002, "Can't open port."
+3003, "An error occurred while sending the packet to the port."
+3004, "An error occurred while receiving a packet from the port."
+3005, "Port error in the Purge call."
+
+4000, "Invalid value \"%s\" parameter \"%s\""
+
+4001, "Result: %s"
+4002, "<empty>"
+4003, "full compliance"
+4004, "not match"
+
+4005, "Look, an Error Dialog"
+
+4006, "&Number:"
+4007, "&Address:"
+4008, "&TimeOut, ms:"
+4009, "&Baud Rate:"
+
+4010, "Address"
+4011, "TimeOut"
+4012, "Baud Rate"
+
+4013, "&Open"
+4014, "C&lose"
+4015, "&Info"
+4016, "&Echo"
+
+4017, "&Debug Log"
+
+4018, " Commands "
+4019, " Port "
+END

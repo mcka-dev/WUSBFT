@@ -1,0 +1,8 @@
+.vs/
+Debug/
+Release/
+Temp/
+
+WUSB.VC.db
+WUSB.VC.VC.opendb
+WUSB.vcxproj.user

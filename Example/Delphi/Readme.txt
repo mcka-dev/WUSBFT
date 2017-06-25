@@ -1,1 +1,0 @@
-Embarcadero Delphi v10.2 Tokyo (x86/x64)

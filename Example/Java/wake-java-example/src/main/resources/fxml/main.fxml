@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="412.0" prefWidth="682.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.krasutski.view.MainController">
+
+    <BorderPane layoutX="183.0" layoutY="179.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <top>
+            <Pane fx:id="topPane" layoutX="14.0" layoutY="30.0" style="-fx-border-color: #ddd; -fx-border-width: 1; -fx-background-radius: 6;">
+                <HBox alignment="CENTER" layoutX="5.0" layoutY="7.0" spacing="8.0">
+                    <Label fx:id="numberLabel" mnemonicParsing="true" text="%Label.number.text" />
+                    <ComboBox fx:id="numberComboBox" prefWidth="60.0" />
+                    <Label fx:id="baudRateLabel" mnemonicParsing="true" text="%Label.baudRate.text" />
+                    <TextField fx:id="baudRateTextField" prefWidth="60.0" promptText="%TextField.baudRate.promptText" text="38400" />
+                    <Button fx:id="openButton" onAction="#openAction" prefWidth="85.0" text="%Button.open.text" />
+                    <Button fx:id="closeButton" onAction="#closeAction" prefWidth="85.0" text="%Button.close.text" />
+               <padding>
+                  <Insets top="3.0" />
+               </padding>
+                </HBox>
+                <Label fx:id="portLabel" layoutX="5.0" layoutY="-7.0" text="%Label.port.text">
+                    <padding>
+                        <Insets left="2.0" right="2.0" />
+                    </padding>
+                </Label>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <BorderPane.margin>
+               <Insets bottom="8.0" />
+            </BorderPane.margin>
+            </Pane>
+        </top>
+        <center>
+            <TextArea fx:id="outputTextArea" editable="false" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+        </center>
+        <bottom>
+            <Pane fx:id="bottomPane" layoutX="14.0" layoutY="30.0" style="-fx-border-color: #ddd; -fx-border-width: 1; -fx-background-radius: 6;">
+                <HBox alignment="CENTER" layoutX="5.0" layoutY="7.0" spacing="8.0">
+                    <Label mnemonicParsing="true" text="%Label.address.text" />
+                    <TextField fx:id="addressTextField" prefWidth="50.0" promptText="%TextField.address.promptText" text="0" />
+                    <Label mnemonicParsing="true" text="%Label.timeOut.text" />
+                    <TextField fx:id="timeOutTextField" prefWidth="60.0" promptText="%TextField.timeOut.promptText" text="100" />
+                    <Button fx:id="infoButton" onAction="#infoAction" prefWidth="85.0" text="%Button.info.text" />
+                    <Button fx:id="echoButton" onAction="#echoAction" prefWidth="85.0" text="%Button.echo.text" />
+                    <CheckBox fx:id="debugCheckBox" selected="true" text="%ComboBox.debug.text" />
+               <padding>
+                  <Insets top="3.0" />
+               </padding>
+                </HBox>
+                <Label fx:id="commandsLabel" layoutX="5.0" layoutY="-7.0" text="%Label.commands.text">
+                    <padding>
+                        <Insets left="2.0" right="2.0" />
+                    </padding>
+                </Label>
+                <opaqueInsets>
+                    <Insets />
+                </opaqueInsets>
+                <BorderPane.margin>
+                    <Insets top="8.0" />
+                </BorderPane.margin>
+            </Pane>
+        </bottom>
+    </BorderPane>
+    <padding>
+        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+    </padding>
+
+
+</AnchorPane>

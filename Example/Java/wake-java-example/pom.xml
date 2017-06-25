@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.krasutski</groupId>
+    <artifactId>wake-java-example</artifactId>
+    <name>wake-java-example</name>
+
+    <packaging>jar</packaging>
+    <version>1.0</version>
+
+    <organization>
+        <!-- Used as the 'Vendor' for JNLP generation -->
+        <name>N/A</name>
+    </organization>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <build>
+        <finalName>wake-java-example</finalName>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.0.2</version>
+                <executions>
+                    <execution>
+                        <id>copy-resources</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <overwrite>true</overwrite>
+                            <outputDirectory>${project.build.directory}/app/Native</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>../../../Dynamic Library/Windows/WUSB/Release/x86</directory>
+                                    <filtering>false</filtering>
+                                    <includes>
+                                        <include>**/*.dll</include>
+                                    </includes>
+                                </resource>
+                                <resource>
+                                    <directory>../../../Dynamic Library/Windows/WUSB/Release/x64</directory>
+                                    <filtering>false</filtering>
+                                    <includes>
+                                        <include>**/*.dll</include>
+                                    </includes>
+                                </resource>
+                                <resource>
+                                    <directory>../../../Dynamic Library/Linux/libWUSB/Release/x86</directory>
+                                    <filtering>false</filtering>
+                                    <includes>
+                                        <include>**/*.so</include>
+                                    </includes>
+                                </resource>
+                                <resource>
+                                    <directory>../../../Dynamic Library/Linux/libWUSB/Release/x64</directory>
+                                    <filtering>false</filtering>
+                                    <includes>
+                                        <include>**/*.so</include>
+                                    </includes>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.0.0</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <outputFile>${project.build.directory}/app/${project.build.finalName}.jar</outputFile>
+                            <createDependencyReducedPom>false</createDependencyReducedPom>
+                            <minimizeJar>true</minimizeJar>
+                            <transformers>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>com.krasutski.MainApp</mainClass>
+                                </transformer>
+                            </transformers>
+                            <filters>
+                                <filter>
+                                    <artifact>*:*</artifact>
+                                    <excludes>
+                                        <exclude>META-INF/maven/**</exclude>
+                                    </excludes>
+                                </filter>
+                                <filter>
+                                    <artifact>net.java.dev.jna:jna</artifact>
+                                    <includes>
+                                        <include>com/sun/jna/*</include>
+                                        <include>com/sun/jna/ptr/*</include>
+                                        <include>com/sun/jna/linux-x86/*</include>
+                                        <include>com/sun/jna/linux-x86-64/*</include>
+                                        <include>com/sun/jna/win32/*</include>
+                                        <include>com/sun/jna/win32-x86/*</include>
+                                        <include>com/sun/jna/win32-x86-64/*</include>
+                                    </includes>
+                                </filter>
+                            </filters>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!--
+            <plugin>
+                <groupId>com.zenjava</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>8.6.0</version>
+                <configuration>
+                    <mainClass>com.krasutski.MainApp</mainClass>
+                    <css2bin>true</css2bin>
+                    <jfxMainAppJarName>${project.build.finalName}.jar</jfxMainAppJarName>
+                    <addPackagerJar>false</addPackagerJar>
+                    <allPermissions>true</allPermissions>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>create-jfxjar</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>build-jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            -->
+
+            <!--
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>com.krasutski.MainApp</mainClass>
+                        </manifest>
+                        <addMavenDescriptor>false</addMavenDescriptor>
+                    </archive>
+                </configuration>
+            </plugin>
+            -->
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>net.java.dev.jna</groupId>
+            <artifactId>jna</artifactId>
+            <version>4.4.0</version>
+        </dependency>
+    </dependencies>
+</project>

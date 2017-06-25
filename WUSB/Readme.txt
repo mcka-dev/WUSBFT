@@ -1,1 +1,0 @@
-Visual Studio 2017 (x86/x64)
