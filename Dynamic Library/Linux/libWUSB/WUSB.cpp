@@ -1,4 +1,4 @@
-#include "libWUSB.h"
+#include "WUSB.h"
 #include "ftd2xx.h"
 
 #define CRC_Init 0xDE //CRC Initial value
@@ -14,6 +14,25 @@ TFESC = 0xDD;         //Transposed Frame ESCape
 
 void DowCRC(unsigned char b, unsigned char &crc);
 bool RxByte(unsigned char &b);
+
+
+#ifdef _WINDOWS
+BOOL APIENTRY DllMain(HMODULE hModule,
+	DWORD  ul_reason_for_call,
+	LPVOID lpReserved
+)
+{
+	switch (ul_reason_for_call)
+	{
+	case DLL_PROCESS_ATTACH:
+	case DLL_THREAD_ATTACH:
+	case DLL_THREAD_DETACH:
+	case DLL_PROCESS_DETACH:
+		break;
+	}
+	return TRUE;
+}
+#endif
 
 //----------------------- Access check for USB resource: --------------------
 
