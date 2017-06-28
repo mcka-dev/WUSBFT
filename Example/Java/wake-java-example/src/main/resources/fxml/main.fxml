@@ -28,7 +28,7 @@
                   <Insets top="3.0" />
                </padding>
                 </HBox>
-                <Label fx:id="portLabel" layoutX="5.0" layoutY="-7.0" text="%Label.port.text">
+                <Label fx:id="portLabel" layoutX="5.0" layoutY="-8.0" text="%Label.port.text">
                     <padding>
                         <Insets left="2.0" right="2.0" />
                     </padding>
@@ -58,7 +58,7 @@
                   <Insets top="3.0" />
                </padding>
                 </HBox>
-                <Label fx:id="commandsLabel" layoutX="5.0" layoutY="-7.0" text="%Label.commands.text">
+                <Label fx:id="commandsLabel" layoutX="5.0" layoutY="-8.0" text="%Label.commands.text">
                     <padding>
                         <Insets left="2.0" right="2.0" />
                     </padding>

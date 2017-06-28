@@ -59,7 +59,7 @@ Example of use in
 
     - Ubuntu
 
-      <a href="https://github.com/mcka-dev/WUSBFT/blob/master/Example/Java/wake-java-example/screenshots/Ubuntu (Rus) - Wake Java пример.png"><img src="https://github.com/mcka-dev/WUSBFT/blob/master/Example/Java/wake-java-example/screenshots/Ubuntu (Rus) - Wake Java пример.png" alt="Ubuntu: Wake Java пример" title="Ubuntu: Wake Java пример"></a>
+      <a href="https://github.com/mcka-dev/WUSBFT/blob/master/Example/Java/wake-java-example/screenshots/Ubuntu (Eng) - Wake Java example.png"><img src="https://github.com/mcka-dev/WUSBFT/blob/master/Example/Java/wake-java-example/screenshots/Ubuntu (Eng) - Wake Java example.png" alt="Ubuntu: Wake Java example" title="Ubuntu: Wake Java example"></a>
 
     - Debian
     
