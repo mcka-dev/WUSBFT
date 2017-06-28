@@ -12,5 +12,5 @@ Java 8
 Apache Maven
 
 ## The software runs on operating systems 
-- Windows XP/Vista/7/8/8.1/10
-- Linux Debian/Ubuntu/OpenSuse/Fedora
+- Windows XP/Vista/7/8/8.1/10 (x86/x86-64)
+- Linux Debian/Ubuntu/OpenSuse/Fedora (x86/x86-64)
