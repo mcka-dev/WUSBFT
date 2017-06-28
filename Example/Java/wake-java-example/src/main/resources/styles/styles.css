@@ -1,10 +1,11 @@
 /* Application wide styles */
 
-#topPane > #commandsLabel,
-#bottomPane > #portLabel {
+#commandsLabel, #portLabel {
+    -fx-opacity: 1;
     -fx-background-color: -fx-background;
 }
-
-#commandsLabel:disabled, #portLabel:disabled{
+#commandsLabel:disabled, #portLabel:disabled {
+    -fx-text-fill: #CCCCCC;
     -fx-opacity: 1;
+    -fx-background-color: -fx-background;
 }

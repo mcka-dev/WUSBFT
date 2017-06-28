@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 echo "This script is for modern debian systems, and does everything that should"
 echo "be necessary to use ftdi usb devices as a regular user with libftdi,"
