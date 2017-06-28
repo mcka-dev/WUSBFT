@@ -74,32 +74,36 @@
     <TargetName>$(ProjectName)$(PlatformArchitecture)</TargetName>
     <EmbedManifest>false</EmbedManifest>
     <LibraryPath>$(ProjectDir)\Lib\$(PlatformTarget);$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
-    <OutDir>$(SolutionDir)$(Configuration)\$(PlatformTarget)</OutDir>
+    <OutDir>$(SolutionDir)$(Configuration)\$(PlatformTarget)\</OutDir>
     <IntDir>Temp\$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(JAVA_HOME)\include;$(JAVA_HOME)\include\win32\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <TargetName>$(ProjectName)$(PlatformArchitecture)</TargetName>
     <EmbedManifest>false</EmbedManifest>
     <LibraryPath>$(ProjectDir)\Lib\$(PlatformTarget);$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
-    <OutDir>$(SolutionDir)$(Configuration)\$(PlatformTarget)</OutDir>
+    <OutDir>$(SolutionDir)$(Configuration)\$(PlatformTarget)\</OutDir>
     <IntDir>Temp\$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(JAVA_HOME)\include;$(JAVA_HOME)\include\win32\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <TargetName>$(ProjectName)$(PlatformArchitecture)</TargetName>
     <EmbedManifest>false</EmbedManifest>
     <LibraryPath>$(ProjectDir)\Lib\$(PlatformTarget);$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
-    <OutDir>$(SolutionDir)$(Configuration)\$(PlatformTarget)</OutDir>
+    <OutDir>$(SolutionDir)$(Configuration)\$(PlatformTarget)\</OutDir>
     <IntDir>Temp\$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(JAVA_HOME)\include;$(JAVA_HOME)\include\win32\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <TargetName>$(ProjectName)$(PlatformArchitecture)</TargetName>
     <EmbedManifest>false</EmbedManifest>
     <LibraryPath>$(ProjectDir)\Lib\$(PlatformTarget);$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
-    <OutDir>$(SolutionDir)$(Configuration)\$(PlatformTarget)</OutDir>
+    <OutDir>$(SolutionDir)$(Configuration)\$(PlatformTarget)\</OutDir>
     <IntDir>Temp\$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(JAVA_HOME)\include;$(JAVA_HOME)\include\win32\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -184,14 +188,14 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>false</GenerateDebugInformation>
-      <ModuleDefinitionFile>
-      </ModuleDefinitionFile>
+      <ModuleDefinitionFile>wusb.def</ModuleDefinitionFile>
       <AdditionalDependencies>ftd2xx.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
       <EntryPointSymbol>DllMain</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="com_krasutski_jni_WUSB.cpp" />
     <ClCompile Include="wusb.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -208,8 +212,12 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="FTD2XX.H" />
-    <ClInclude Include="wusb.h" />
+    <ClInclude Include="com_krasutski_jni_WUSB.h" />
+    <ClInclude Include="ftd2xx.h" />
+    <ClInclude Include="WUSB.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wusb.def" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,1 +1,1 @@
-# The D2XX drivers for FTDI devices.  
+# The D2XX drivers for FTDI devices.

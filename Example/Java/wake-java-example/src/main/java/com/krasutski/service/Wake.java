@@ -1,17 +1,13 @@
 package com.krasutski.service;
 
 import com.krasutski.exception.WakePortException;
+import com.krasutski.jni.WUSB;
 import com.krasutski.language.Messages;
-import com.krasutski.jna.WUSB;
 import com.krasutski.exception.WakeDeviceException;
-import com.sun.jna.Memory;
-import com.sun.jna.ptr.ByteByReference;
-import com.sun.jna.ptr.IntByReference;
 
 import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @SuppressWarnings("unused")
@@ -77,10 +73,10 @@ public class Wake {
 
         purgePort();
 
-        Memory memory = null;
+        ByteBuffer memory = null;
         if (txCount > (byte) 0) {
-            memory = new Memory(Byte.toUnsignedLong(txCount));
-            memory.write(0L, txData, 0, Byte.toUnsignedInt(txCount));
+            memory = ByteBuffer.allocateDirect(Byte.toUnsignedInt(txCount));
+            memory.put(txData, 0, Byte.toUnsignedInt(txCount));
         }
 
         for (WakeListener listener : listeners) {
@@ -91,29 +87,29 @@ public class Wake {
             throw new WakePortException(Messages.WAKE_PORT_SEND_FRAME_ERROR);
         }
 
-        ByteByReference rxAddress = new ByteByReference();
-        ByteByReference rxCommand = new ByteByReference();
-        ByteByReference rxCount = new ByteByReference();
+        Byte rxAddress = new Byte((byte)0);
+        Byte rxCommand = new Byte((byte)0);
+        Byte rxCount = new Byte((byte)0);
 
-        memory = new Memory(Byte.toUnsignedLong(maxSizeRx));
+        memory = ByteBuffer.allocateDirect(Byte.toUnsignedInt(maxSizeRx));
         if (!WUSB.INSTANCE.RxFrameUSB(timeOut, rxAddress, rxCommand, rxCount, memory)) {
             throw new WakePortException(Messages.WAKE_PORT_RECEIVE_FRAME_ERROR);
         }
 
-        if (txCommand != rxCommand.getValue()) {
+        if (!rxCommand.equals(txCommand)) {
             throw new WakePortException(Messages.WAKE_PORT_COMMAND_NOT_MATCH);
         }
 
-        if (rxCount.getValue() > (byte) 0) {
-            memory.read(0L, rxData, 0, Byte.toUnsignedInt(rxCount.getValue()));
-            checkErrorCode(rxCommand.getValue(), rxData[0]);
+        if (rxCount > (byte) 0) {
+            memory.get(rxData, 0, Byte.toUnsignedInt(rxCount));
+            checkErrorCode(rxCommand, rxData[0]);
         }
 
         for (WakeListener listener : listeners) {
-            listener.doRX(timeOut, rxAddress.getValue(), rxCommand.getValue(), rxCount.getValue(), rxData);
+            listener.doRX(timeOut, rxAddress, rxCommand, rxCount, rxData);
         }
 
-        return rxCount.getValue();
+        return rxCount;
     }
 
     private void checkErrorCode(byte command,
@@ -161,9 +157,9 @@ public class Wake {
     public List<Long> getPorts() {
         List<Long> list = new ArrayList<>();
 
-        IntByReference count = new IntByReference();
-        if (WUSB.INSTANCE.NumUSB(count)) {
-            for (int i = 0; i < count.getValue(); i++) {
+        Integer numDevs = new Integer(0);
+        if (WUSB.INSTANCE.NumUSB(numDevs)) {
+            for (int i = 0; i < numDevs; i++) {
                 list.add((long) i);
             }
         }
