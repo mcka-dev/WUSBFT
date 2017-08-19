@@ -39,7 +39,7 @@ public final class WUSB {
             final String arch = System.getProperty("sun.arch.data.model");
             String libraryName = "";
 
-            if (OS.contains("win") || OS.contains("nux")) {
+            if (OS.contains("win") || OS.contains("nux") || OS.contains("mac"))  {
                 if (arch.contains("64")) {
                     libraryName = "WUSB64";
                 } else {

@@ -78,6 +78,20 @@
                                         <include>**/*.so</include>
                                     </includes>
                                 </resource>
+                                <resource>
+                                    <directory>../../../Dynamic Library/MacOS/libWUSB/Release/x64</directory>
+                                    <filtering>false</filtering>
+                                    <includes>
+                                        <include>**/*.dylib</include>
+                                    </includes>
+                                </resource>
+                                <resource>
+                                    <directory>../../../Dynamic Library/MacOS/libWUSB/Release/x86</directory>
+                                    <filtering>false</filtering>
+                                    <includes>
+                                        <include>**/*.dylib</include>
+                                    </includes>
+                                </resource>
                             </resources>
                         </configuration>
                     </execution>
