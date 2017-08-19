@@ -17,7 +17,10 @@ PDF: http://leoniv.diod.club/articles/wake/downloads/wake.pdf
   - libWUSB32.so (x86, 4780 Byte)
   - libWUSB64.so (x86-64, 5496 Byte)
 
-### Exported functions:   
+- in GNU C++ for MacOS (x86-64):
+  - libWUSB64.dylib (x86-64, 14980 Byte)
+
+### Exported functions*:   
   - AccessUSB
   - CloseUSB
   - NumUSB
@@ -26,9 +29,11 @@ PDF: http://leoniv.diod.club/articles/wake/downloads/wake.pdf
   - RxFrameUSB
   - TxFrameUSB
 
+*include JNI functions  
+
 ## Drivers
 
-for Linux,Windows & MacOS
+for Windows, Linux & MacOS
 
 ## Example
 
