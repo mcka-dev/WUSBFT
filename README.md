@@ -26,9 +26,9 @@ PDF: http://leoniv.diod.club/articles/wake/downloads/wake.pdf
   - RxFrameUSB
   - TxFrameUSB
 
-## Driver
+## Drivers
 
-for Linux & Windows
+for Linux,Windows & MacOS
 
 ## Example
 
@@ -64,6 +64,10 @@ Example of use in
     - Debian
     
       <a href="https://github.com/mcka-dev/WUSBFT/blob/master/Example/Java/wake-java-example/screenshots/Debian (Eng) - Wake Java example.png"><img src="https://github.com/mcka-dev/WUSBFT/blob/master/Example/Java/wake-java-example/screenshots/Debian (Eng) - Wake Java example.png" alt="Debian: Wake Java example" title="Debian: Wake Java example"></a>
+
+    - MacOS
+    
+      <a href="https://github.com/mcka-dev/WUSBFT/blob/master/Example/Java/wake-java-example/screenshots/MacOS (Rus) - Wake Java пример.png"><img src="https://github.com/mcka-dev/WUSBFT/blob/master/Example/Java/wake-java-example/screenshots/MacOS (Rus) - Wake Java пример.png" alt="Debian: Wake Java example" title="MacOS: Wake Java пример"></a>
 
 ## License
 

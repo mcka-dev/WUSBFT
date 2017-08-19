@@ -1,0 +1,15 @@
+EXPORTS
+    AccessUSB @1
+    NumUSB @2
+    OpenUSB @3
+    CloseUSB @4
+    PurgeUSB @5
+    RxFrameUSB @6
+    TxFrameUSB @7
+    Java_com_krasutski_jni_WUSB_AccessUSB @8
+    Java_com_krasutski_jni_WUSB_NumUSB @9
+    Java_com_krasutski_jni_WUSB_OpenUSB @10
+    Java_com_krasutski_jni_WUSB_CloseUSB @11
+    Java_com_krasutski_jni_WUSB_PurgeUSB @12
+    Java_com_krasutski_jni_WUSB_RxFrameUSB @13
+    Java_com_krasutski_jni_WUSB_TxFrameUSB @14

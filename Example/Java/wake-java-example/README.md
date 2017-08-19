@@ -6,7 +6,7 @@ Java 8
 ## Dependencies
 - Oracle Java 8 or OpenJDK 8
 - JavaFx 8 or OpenJFX 8
-- FTDI Driver
+- FTDI D2XX Driver
 
 ## Building Project
 Apache Maven

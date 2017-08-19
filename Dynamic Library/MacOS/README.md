@@ -1,4 +1,4 @@
-# libUSB32.so/libUSB64.so Dynamic Library for Linux
+# libUSB32.dylib/libUSB64.dylib Dynamic Library for MacOS
 
 ## Programming language
 C++
