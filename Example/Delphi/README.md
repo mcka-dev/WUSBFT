@@ -2,7 +2,7 @@
 Object Pascal
 
 # Dependencies
-- FTDI Driver
+- FTDI D2XX Driver
 
 # Building Project
 Embarcadero Delphi v10.2 Tokyo (x86/x86-64)

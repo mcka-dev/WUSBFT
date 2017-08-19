@@ -4,7 +4,7 @@
 C++
 
 ## Dependencies
-- FTDI Driver
+- FTDI D2XX Driver
 
 ## Building Project
 g++
